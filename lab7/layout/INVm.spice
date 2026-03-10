@@ -1,0 +1,9 @@
+* NGSPICE file created from INVm.ext - technology: scmos
+
+.subckt INVX1 A Y vdd gnd
+M1000 Y A gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=6.3p ps=10.2u
+M1001 Y A vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=12.6p ps=16.2u
+.ends
+

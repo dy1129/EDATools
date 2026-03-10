@@ -1,0 +1,8 @@
+magic
+tech scmos
+timestamp 1764652213
+use NOR2X1  NOR2X1_0 digital_ETRI_copy
+timestamp 1764652213
+transform 1 0 0 0 1 0
+box -6 -4 46 126
+<< end >>

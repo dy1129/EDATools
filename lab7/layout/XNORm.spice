@@ -1,0 +1,72 @@
+* NGSPICE file created from XNORm1.ext - technology: scmos (HIERARCHY KEPT, FIXED WIRING)
+
+* =============================================================================
+* 1. 최상위 셀: XNORm1 (XORm1 구조를 기반으로 최종 인버터 제거)
+* -----------------------------------------------------------------------------
+.subckt XNORm A B Y vdd gnd
+
+* [x1] NAND Gate (Input: A, B -> Output: net3)
+XNANDm_1 A B net3 vdd gnd NANDm
+
+* [x4] NOR Gate (Input: A, B -> Output: net2)
+XNORm_1 A B net2 vdd gnd NORm
+
+* [x3] Inverter (Input: net2 -> Output: net4)
+XINVm_1 net2 net4 vdd gnd INVm
+
+* [x2] NAND Gate (Input: net3, net4 -> Output: net1) **XNOR Output (A.B)**
+XNANDm_2 net3 net4 net1 vdd gnd NANDm
+
+* [x5] Inverter (Input: net1 -> Output: net5) **XOR Output (A+B)**
+XINVm_2 net1 net5 vdd gnd INVm
+
+* [x6] Inverter (Input: net5 -> Output: Y) **XNOR Output (A.B) Again**
+XINVm_3 net5 Y vdd gnd INVm
+
+.ends
+
+.subckt INVm A Y vdd gnd
+* 내부 트랜지스터 셀(INVX1) 호출
+XINVX1_0 A Y vdd gnd INVX1
+.ends
+
+.subckt NANDm A B Y vdd gnd
+* 내부 트랜지스터 셀(NAND2X1) 호출
+XNAND2X1_0 A B Y vdd gnd NAND2X1
+.ends
+
+.subckt NORm A B Y vdd gnd
+* 내부 트랜지스터 셀(NOR2X1) 호출
+XNOR2X1_0 A B Y vdd gnd NOR2X1
+.ends
+
+.subckt INVX1 A Y vdd gnd
+M1000 Y A gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=6.3p ps=10.2u
+M1001 Y A vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=12.6p ps=16.2u
+.ends
+
+.subckt NAND2X1 A B Y vdd gnd
+M1000 a_27_14# A gnd gnd nfet w=6u l=0.6u
++  ad=2.7p pd=6.9u as=12.6p ps=16.2u
+M1001 Y B a_27_14# gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=2.7p ps=6.9u
+M1002 vdd B Y vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1003 Y A vdd vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+.ends
+
+.subckt NOR2X1 A B Y vdd gnd
+M1000 a_25_146# A vdd vdd pfet w=12u l=0.6u
++  ad=3.6p pd=12.6u as=25.2p ps=28.2u
+M1001 Y A gnd gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=6.3p ps=10.2u
+M1002 Y B a_25_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=3.6p ps=12.6u
+M1003 gnd B Y gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=3.6p ps=5.4u
+.ends
+
+

@@ -1,0 +1,80 @@
+* NGSPICE file created from XORm1.ext - technology: scmos (HIERARCHY KEPT, FIXED WIRING)
+
+* =============================================================================
+* 1. 최상위 셀: XORm1 (래퍼 셀을 사용하여 조립)
+* -----------------------------------------------------------------------------
+* 핀 순서: A B Y vdd gnd (Schematic과 일치)
+* 내부 연결: Schematic의 x1~x5 논리(net1~net4)를 래퍼 셀을 통해 구현
+* =============================================================================
+.subckt XORm1 A B Y vdd gnd
+
+* [x1] NAND Gate (Input: A, B -> Output: net3)
+XNANDm_0 A B net3 vdd gnd NANDm
+
+* [x4] NOR Gate (Input: A, B -> Output: net2)
+XNORm_0 A B net2 vdd gnd NORm
+
+* [x3] Inverter (Input: net2 -> Output: net4)
+XINVm_1 net2 net4 vdd gnd INVm
+
+* [x2] NAND Gate (Input: net3, net4 -> Output: net1)
+XNANDm_1 net3 net4 net1 vdd gnd NANDm
+
+* [x5] Inverter (Input: net1 -> Output: Y)
+XINVm_0 net1 Y vdd gnd INVm
+
+.ends
+
+* =============================================================================
+* 2. 래퍼 셀 (Wrapper Cells) - 핀 정의를 표준화하여 수정함
+* -----------------------------------------------------------------------------
+* 주의: 래퍼 셀의 외부 핀 이름을 단순화(A, B, Y...)하여 상위 셀과 연결되게 함
+* =============================================================================
+
+.subckt INVm A Y vdd gnd
+* 내부 트랜지스터 셀(INVX1) 호출
+XINVX1_0 A Y vdd gnd INVX1
+.ends
+
+.subckt NANDm A B Y vdd gnd
+* 내부 트랜지스터 셀(NAND2X1) 호출
+XNAND2X1_0 A B Y vdd gnd NAND2X1
+.ends
+
+.subckt NORm A B Y vdd gnd
+* 내부 트랜지스터 셀(NOR2X1) 호출
+XNOR2X1_0 A B Y vdd gnd NOR2X1
+.ends
+
+* =============================================================================
+* 3. 하위 셀 (Transistor Level) - W/L 및 핀 순서 유지
+* =============================================================================
+
+.subckt INVX1 A Y vdd gnd
+M1000 Y A gnd gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=6.3p ps=10.2u
+M1001 Y A vdd vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=12.6p ps=16.2u
+.ends
+
+.subckt NAND2X1 A B Y vdd gnd
+M1000 a_27_14# A gnd gnd nfet w=6u l=0.6u
++  ad=2.7p pd=6.9u as=12.6p ps=16.2u
+M1001 Y B a_27_14# gnd nfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=2.7p ps=6.9u
+M1002 vdd B Y vdd pfet w=6u l=0.6u
++  ad=12.6p pd=16.2u as=7.2p ps=8.4u
+M1003 Y A vdd vdd pfet w=6u l=0.6u
++  ad=7.2p pd=8.4u as=12.6p ps=16.2u
+.ends
+
+.subckt NOR2X1 A B Y vdd gnd
+M1000 a_25_146# A vdd vdd pfet w=12u l=0.6u
++  ad=3.6p pd=12.6u as=25.2p ps=28.2u
+M1001 Y A gnd gnd nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=6.3p ps=10.2u
+M1002 Y B a_25_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=3.6p ps=12.6u
+M1003 gnd B Y gnd nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=3.6p ps=5.4u
+.ends

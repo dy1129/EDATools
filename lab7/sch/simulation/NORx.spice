@@ -1,0 +1,13 @@
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/NORx.sch
+.subckt NORx A B Y vdd gnd
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+M1 net1 A vdd vdd pfet w=12u l=0.6u m=1
+M2 Y B net1 vdd pfet w=12u l=0.6u m=1
+M3 Y B gnd gnd nfet w=3u l=0.6u m=1
+M4 Y A gnd gnd nfet w=3u l=0.6u m=1
+.ends
+.end

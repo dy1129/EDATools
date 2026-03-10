@@ -1,0 +1,62 @@
+timestamp 1764648528
+version 8.3
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 50
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use NORm NORm_0 1 0 -410 0 1 190
+use NANDm NANDm_1 1 0 -262 0 1 190
+use NANDm NANDm_0 1 0 -480 0 1 190
+use INVm INVm_1 1 0 -180 0 1 196
+use INVm INVm_0 1 0 -330 0 1 196
+port "Y" 5 -153 293 -139 307 m2
+port "gnd" 2 -486 184 -110 196 ppc
+port "vdd" 1 -486 424 -110 436 nnc
+port "B" 4 -367 273 -353 327 m2
+port "B" 4 -437 313 -353 327 m2
+port "A" 6 -477 273 -393 287 m2
+port "A" 6 -477 273 -463 327 m2
+node "Y" 0 0 -153 293 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 0 0 -486 184 ppc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 0 0 -486 424 nnc 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m2_n387_253#" 0 5187 -387 253 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1092 184 0 0
+node "m2_n303_293#" 0 12103 -303 293 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2548 392 0 0
+node "m2_n239_293#" 0 13832 -239 293 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2912 444 0 0
+node "B" 0 8246 -437 313 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1736 276 0 0
+node "A" 0 8246 -477 273 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1736 276 0 0
+node "m2_n457_293#" 1 21014 -457 293 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4424 660 0 0
+cap "NANDm_0/NAND2X1_0/Y" "INVm_0/INVX1_0/Y" 1260
+cap "INVm_0/INVX1_0/vdd" "NORm_0/NOR2X1_0/B" 826.5
+cap "NORm_0/NOR2X1_0/B" "NORm_0/NOR2X1_0/Y" 1368.5
+cap "INVm_0/INVX1_0/vdd" "NANDm_0/NAND2X1_0/Y" 7704.5
+cap "NANDm_0/NAND2X1_0/Y" "NORm_0/NOR2X1_0/B" 266
+cap "NANDm_0/NAND2X1_0/Y" "NORm_0/NOR2X1_0/Y" 2310
+cap "NORm_0/NOR2X1_0/A" "NORm_0/NOR2X1_0/B" 665
+cap "NANDm_0/NAND2X1_0/Y" "NORm_0/NOR2X1_0/a_25_146#" 308
+cap "NORm_0/NOR2X1_0/A" "NANDm_0/NAND2X1_0/Y" 1716
+cap "NANDm_0/NAND2X1_0/Y" "NORm_0/NOR2X1_0/vdd" 2044
+cap "NANDm_1/NAND2X1_0/B" "NANDm_1/NAND2X1_0/Y" 1526
+cap "NANDm_1/NAND2X1_0/B" "NANDm_1/NAND2X1_0/A" 437
+cap "NANDm_1/NAND2X1_0/Y" "NANDm_1/NAND2X1_0/A" 285
+cap "INVm_0/INVX1_0/vdd" "NANDm_1/NAND2X1_0/Y" 5500.5
+cap "INVm_0/INVX1_0/vdd" "NANDm_1/NAND2X1_0/A" 4987.5
+merge "INVm_0/INVX1_0/A" "NORm_0/NOR2X1_0/Y" -2128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -392 -112 0 0
+merge "NORm_0/NOR2X1_0/Y" "m2_n387_253#"
+merge "INVm_0/INVX1_0/gnd" "INVm_1/INVX1_0/gnd" -2068 0 0 -528 -184 0 0 0 0 0 0 0 0 -704 -216 0 0 0 0
+merge "INVm_1/INVX1_0/gnd" "NANDm_1/NAND2X1_0/gnd"
+merge "NANDm_1/NAND2X1_0/gnd" "NANDm_0/NAND2X1_0/gnd"
+merge "NANDm_0/NAND2X1_0/gnd" "NORm_0/NOR2X1_0/gnd"
+merge "NANDm_1/NAND2X1_0/A" "NANDm_0/NAND2X1_0/Y" -20957 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -588 -140 0 0
+merge "NANDm_0/NAND2X1_0/Y" "m2_n457_293#"
+merge "INVm_0/INVX1_0/vdd" "INVm_1/INVX1_0/vdd" 0 -528 -184 0 0 0 0 0 0 0 0 0 0 -704 -216 0 0 -5520 -572
+merge "INVm_1/INVX1_0/vdd" "NANDm_1/NAND2X1_0/vdd"
+merge "NANDm_1/NAND2X1_0/vdd" "NANDm_0/NAND2X1_0/vdd"
+merge "NANDm_0/NAND2X1_0/vdd" "NORm_0/NOR2X1_0/vdd"
+merge "INVm_1/INVX1_0/A" "NANDm_1/NAND2X1_0/Y" -11656.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -784 -168 0 0
+merge "NANDm_1/NAND2X1_0/Y" "m2_n239_293#"
+merge "NANDm_1/NAND2X1_0/B" "INVm_0/INVX1_0/Y" -5272.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -588 -140 0 0
+merge "INVm_0/INVX1_0/Y" "m2_n303_293#"
+merge "NANDm_0/NAND2X1_0/A" "NORm_0/NOR2X1_0/A" -4864 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -588 -140 0 0
+merge "NORm_0/NOR2X1_0/A" "A"
+merge "NANDm_0/NAND2X1_0/B" "NORm_0/NOR2X1_0/B" -5158.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -588 -140 0 0
+merge "NORm_0/NOR2X1_0/B" "B"

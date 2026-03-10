@@ -1,0 +1,60 @@
+magic
+tech scmos
+magscale 1 2
+timestamp 1764906332
+<< error_s >>
+rect -486 424 -130 436
+rect -285 279 -283 293
+rect -486 184 -119 196
+<< metal2 >>
+rect -457 355 -245 369
+rect -477 287 -463 327
+rect -457 293 -443 355
+rect -437 313 -353 327
+rect -259 313 -245 355
+rect -239 337 -159 351
+rect -477 273 -393 287
+rect -367 273 -353 313
+rect -303 293 -271 307
+rect -239 293 -225 337
+rect -285 275 -271 293
+rect -219 275 -205 327
+rect -387 253 -309 267
+rect -285 261 -205 275
+rect -173 253 -159 337
+use INVm  INVm_0
+timestamp 1764652213
+transform 1 0 -330 0 1 196
+box -8 -14 76 246
+use INVm  INVm_1
+timestamp 1764652213
+transform 1 0 -180 0 1 196
+box -8 -14 76 246
+use NANDm  NANDm_0
+timestamp 1764652213
+transform 1 0 -480 0 1 190
+box -12 -8 92 252
+use NANDm  NANDm_1
+timestamp 1764652213
+transform 1 0 -262 0 1 190
+box -12 -8 92 252
+use NORm  NORm_0
+timestamp 1764652213
+transform 1 0 -410 0 1 190
+box -12 -8 92 252
+<< labels >>
+rlabel nsubstratencontact -486 424 -110 436 0 vdd
+port 1 nsew
+rlabel psubstratepcontact -486 184 -110 196 0 gnd
+port 2 nsew
+rlabel metal2 -437 313 -353 327 0 B
+port 4 nsew
+rlabel metal2 -153 293 -139 307 0 Y
+port 5 nsew
+rlabel metal2 -477 273 -463 327 0 A
+port 6 nsew
+rlabel metal2 -477 273 -393 287 0 A
+port 6 nsew
+rlabel metal2 -367 273 -353 327 0 B
+port 4 nsew
+<< end >>

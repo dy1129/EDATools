@@ -1,0 +1,82 @@
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/tb_xor.sch
+**.subckt tb_xor
+x1 VDD GND A B Y XORx
+vA A GND pulse(0 5 1u 1u 1u 20u 40u)
+vB B GND pulse(0 5 1u 1u 1u 40u 80u)
+vdd VDD GND 5
+**** begin user architecture code
+
+
+
+.include ~/ETRI050_DesignKit/tech/05cmos_model_240201.lib
+.save all
+.tran 5u 200u
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/dayesong/ETRI050_DesignKit/lab7/sch/XORx.sym # of pins=5
+** sym_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/XORx.sym
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/XORx.sch
+.subckt XORx vdd gnd A B Y
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+x4 vdd A net1 B gnd NORx
+x2 vdd net1 net4 gnd INVx
+x3 vdd net3 net2 net4 gnd NANDx
+x5 vdd net2 Y gnd INVx
+x1 vdd A net3 B gnd NANDx
+.ends
+
+
+* expanding   symbol:  /home/dayesong/ETRI050_DesignKit/lab7/sch/NORx.sym # of pins=5
+** sym_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/NORx.sym
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/NORx.sch
+.subckt NORx vdd A Y B gnd
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+M1 net1 A vdd vdd pfet w=12u l=0.6u m=1
+M2 Y B net1 vdd pfet w=12u l=0.6u m=1
+M3 Y B gnd gnd nfet w=3u l=0.6u m=1
+M4 Y A gnd gnd nfet w=3u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  /home/dayesong/ETRI050_DesignKit/lab7/sch/INVx.sym # of pins=4
+** sym_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/INVx.sym
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/INVx.sch
+.subckt INVx vdd A Y gnd
+*.ipin A
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+M1 Y A vdd vdd pfet w=6u l=0.6u m=1
+M2 Y A gnd gnd nfet w=3u l=0.6u m=1
+.ends
+
+
+* expanding   symbol:  /home/dayesong/ETRI050_DesignKit/lab7/sch/NANDx.sym # of pins=5
+** sym_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/NANDx.sym
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/NANDx.sch
+.subckt NANDx vdd A Y B gnd
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+M3 Y A net1 gnd nfet w=6u l=0.6u m=1
+M4 Y B vdd vdd pfet w=6u l=0.6u m=1
+M2 Y A vdd vdd pfet w=6u l=0.6u m=1
+M1 net1 B gnd gnd nfet w=6u l=0.6u m=1
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end

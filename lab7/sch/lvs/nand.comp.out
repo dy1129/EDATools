@@ -1,0 +1,25 @@
+
+Subcircuit summary:
+Circuit 1: NAND2X1                         |Circuit 2: NANDx                           
+-------------------------------------------|-------------------------------------------
+nfet (2)                                   |nfet (2)                                   
+pfet (2)                                   |pfet (2)                                   
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NAND2X1                         |Circuit 2: NANDx                           
+-------------------------------------------|-------------------------------------------
+vdd                                        |vdd                                        
+Y                                          |Y                                          
+gnd                                        |gnd                                        
+B                                          |B                                          
+A                                          |A                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND2X1 and NANDx are equivalent.
+
+Final result: Circuits match uniquely.
+.

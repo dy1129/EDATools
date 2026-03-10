@@ -1,0 +1,73 @@
+Flattening unmatched subcell INVm in circuit XORm1 (0)(2 instances)
+Flattening unmatched subcell INVX1 in circuit XORm1 (0)(2 instances)
+Flattening unmatched subcell NANDm in circuit XORm1 (0)(2 instances)
+Flattening unmatched subcell NAND2X1 in circuit XORm1 (0)(2 instances)
+Flattening unmatched subcell NORm in circuit XORm1 (0)(1 instance)
+Flattening unmatched subcell NOR2X1 in circuit XORm1 (0)(1 instance)
+Flattening unmatched subcell nand in circuit XOR (1)(2 instances)
+Flattening unmatched subcell nor in circuit XOR (1)(1 instance)
+Flattening unmatched subcell inv in circuit XOR (1)(2 instances)
+
+Cell XORm1 (0) disconnected node: B
+Cell XORm1 (0) disconnected node: Y
+Cell XORm1 (0) disconnected node: gnd
+Cell XORm1 (0) disconnected node: vdd
+Subcircuit summary:
+Circuit 1: XORm1                           |Circuit 2: XOR                             
+-------------------------------------------|-------------------------------------------
+nfet (8)                                   |nfet (8)                                   
+pfet (8)                                   |pfet (8)                                   
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 13 **Mismatch**            |Number of nets: 12 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: XORm1                           |Circuit 2: XOR                             
+
+---------------------------------------------------------------------------------------
+Net: /INVm_0/INVX1_0/Y                     |Net: net3                                  
+  nfet/(drain|source) = 1                  |  pfet/(drain|source) = 2                  
+  pfet/(drain|source) = 1                  |  nfet/(drain|source) = 1                  
+                                           |  nfet/gate = 1                            
+                                           |  pfet/gate = 1                            
+                                           |                                           
+Net: A                                     |Net: A                                     
+  nfet/gate = 3                            |  nfet/gate = 2                            
+  pfet/gate = 3                            |  pfet/gate = 2                            
+  pfet/(drain|source) = 2                  |                                           
+  nfet/(drain|source) = 1                  |                                           
+                                           |                                           
+Net: /NANDm_0/NAND2X1_0/B                  |Net: B                                     
+  nfet/gate = 1                            |  pfet/gate = 2                            
+  pfet/gate = 1                            |  nfet/gate = 2                            
+                                           |                                           
+Net: /NANDm_1/NAND2X1_0/B                  |Net: net4                                  
+  nfet/gate = 1                            |  pfet/gate = 1                            
+  pfet/gate = 1                            |  nfet/gate = 1                            
+                                           |  pfet/(drain|source) = 1                  
+                                           |  nfet/(drain|source) = 1                  
+                                           |                                           
+Net: /NORm_0/NOR2X1_0/B                    |(no matching net)                          
+  pfet/gate = 1                            |                                           
+  nfet/gate = 1                            |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: XORm1                           |Circuit 2: XOR                             
+-------------------------------------------|-------------------------------------------
+A                                          |(no pin, node is net3)                     
+(no pin, node is /NORm_0/NOR2X1_0/B)       |A                                          
+(no pin, node is /NORm_0/NOR2X1_0/B)       |B                                          
+(no pin, node is /INVm_1/INVX1_0/Y)        |Y                                          
+(no pin, node is INVm_1/INVX1_0/vdd)       |vdd                                        
+(no pin, node is INVm_1/INVX1_0/gnd)       |gnd                                        
+B                                          |(no matching pin)                          
+Y                                          |(no matching pin)                          
+gnd                                        |(no matching pin)                          
+vdd                                        |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for XORm1 and XOR altered to match.
+Device classes XORm1 and XOR are equivalent.
+
+Final result: Top level cell failed pin matching.

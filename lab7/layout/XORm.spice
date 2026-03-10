@@ -1,0 +1,54 @@
+* NGSPICE file created from XORm.ext - technology: scmos
+
+.global Vdd Gnd 
+
+.subckt INVX1 A Y vdd gnd
+M1000 Y A vdd vdd pfet w=20u l=2u
++  ad=0.14n pd=54u as=0.14n ps=54u
+M1001 Y A gnd Gnd nfet w=10u l=2u
++  ad=70p pd=34u as=70p ps=34u
+.ends
+
+.subckt INVm INVX1_0/A INVX1_0/vdd INVX1_0/gnd INVX1_0/Y
+XINVX1_0 INVX1_0/A INVX1_0/Y INVX1_0/vdd INVX1_0/gnd INVX1
+.ends
+
+.subckt NAND2X1 A B Y vdd gnd
+M1000 a_27_14# A gnd Gnd nfet w=20u l=2u
++  ad=30p pd=23u as=0.14n ps=54u
+M1001 Y A vdd vdd pfet w=20u l=2u
++  ad=80p pd=28u as=0.14n ps=54u
+M1002 Y B a_27_14# Gnd nfet w=20u l=2u
++  ad=0.14n pd=54u as=30p ps=23u
+M1003 vdd B Y vdd pfet w=20u l=2u
++  ad=0.14n pd=54u as=80p ps=28u
+.ends
+
+.subckt NANDm NAND2X1_0/vdd NAND2X1_0/gnd NAND2X1_0/B NAND2X1_0/A NAND2X1_0/Y
+XNAND2X1_0 NAND2X1_0/A NAND2X1_0/B NAND2X1_0/Y NAND2X1_0/vdd NAND2X1_0/gnd NAND2X1
+.ends
+
+.subckt NOR2X1 A B Y vdd gnd
+M1000 Y A gnd Gnd nfet w=10u l=2u
++  ad=40p pd=18u as=70p ps=34u
+M1001 a_25_146# A vdd vdd pfet w=40u l=2u
++  ad=40p pd=42u as=0.28n ps=94u
+M1002 gnd B Y Gnd nfet w=10u l=2u
++  ad=70p pd=34u as=40p ps=18u
+M1003 Y B a_25_146# vdd pfet w=40u l=2u
++  ad=0.28n pd=94u as=40p ps=42u
+.ends
+
+.subckt NORm NOR2X1_0/gnd NOR2X1_0/B NOR2X1_0/A NOR2X1_0/Y NOR2X1_0/vdd
+XNOR2X1_0 NOR2X1_0/A NOR2X1_0/B NOR2X1_0/Y NOR2X1_0/vdd NOR2X1_0/gnd NOR2X1
+.ends
+
+.subckt XORm vdd gnd B Y A
+XINVm_0 INVm_0/INVX1_0/A INVm_1/INVX1_0/vdd INVm_1/INVX1_0/gnd INVm_0/INVX1_0/Y INVm
+XINVm_1 INVm_1/INVX1_0/A INVm_1/INVX1_0/vdd INVm_1/INVX1_0/gnd INVm_1/INVX1_0/Y INVm
+XNANDm_0 INVm_1/INVX1_0/vdd INVm_1/INVX1_0/gnd B A NANDm_1/NAND2X1_0/A NANDm
+XNANDm_1 INVm_1/INVX1_0/vdd INVm_1/INVX1_0/gnd INVm_0/INVX1_0/Y NANDm_1/NAND2X1_0/A
++ INVm_1/INVX1_0/A NANDm
+XNORm_0 INVm_1/INVX1_0/gnd B A INVm_0/INVX1_0/A INVm_1/INVX1_0/vdd NORm
+.ends
+

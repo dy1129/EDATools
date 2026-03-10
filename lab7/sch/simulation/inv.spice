@@ -1,0 +1,10 @@
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab7/sch/inv.sch
+.subckt inv A Y vdd gnd
+*.ipin A
+*.opin Y
+*.iopin vdd
+*.iopin gnd
+M1 Y A vdd vdd pfet w=6u l=0.6u m=1
+M2 Y A gnd gnd nfet w=3u l=0.6u m=1
+.ends
+.end
