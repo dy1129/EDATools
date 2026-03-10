@@ -1,0 +1,24 @@
+
+Subcircuit summary:
+Circuit 1: NORx                            |Circuit 2: NORm                            
+-------------------------------------------|-------------------------------------------
+nfet (2)                                   |nfet (2)                                   
+pfet (2)                                   |pfet (2)                                   
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NORx                            |Circuit 2: NORm                            
+-------------------------------------------|-------------------------------------------
+vss                                        |vss                                        
+B                                          |B                                          
+A                                          |A                                          
+vdd                                        |vdd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NORx and NORm are equivalent.
+
+Final result: Circuits match uniquely.
+.

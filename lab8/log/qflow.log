@@ -1,0 +1,84 @@
+Starting new log file Tue Dec 16 14:48:33 2025
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050 from existing qflow_vars.sh file
+Regenerating files for existing project accumulator_4bit
+Qrouter detail maze router version 1.4.88.T
+LEF Read, Line 113: NOTE:  Old format VIARULE ignored.
+Reading LEF data from file /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef.
+LEF Read, Line 114: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF Read, Line 118: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site IO (ignored)
+LEF Read, Line 119: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF Read, Line 130: NOTE:  Old format VIARULE ignored.
+LEF read: Processed 3266 lines.
+LEF Read, Line 131: NOTE:  Old format VIARULE ignored.
+LEF Read: encountered 0 errors and 8 warnings total.
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+Running vlog2Cel to generate input files for graywolf
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+vlog2Cel  -l  /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef -u 100 -o /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/layout/accumulator_4bit.cel /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.rtlnopwr.v
+No accumulator_4bit.cel1 file found for project. . . no partial blockages to apply to layout.
+Preparing pin placement hints from accumulator_4bit.cel2
+Running GrayWolf placement
+graywolf  accumulator_4bit
+Running getantennacell to determine cell to use for antenna anchors.
+Unexpected input in LEF file:  Only macro defs were expected!
+getantennacell.tcl accumulator_4bit  /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef
+Running getfillcell to determine cell to use for fill.
+
+
+--------------------------------
+Qflow project setup
+
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050 from existing qflow_vars.sh file
+Regenerating files for existing project accumulator_4bit
+Running qrouter 1.4.88.T
+qrouter -noc  -s accumulator_4bit.cfg
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050 from existing qflow_vars.sh file
+Regenerating files for existing project accumulator_4bit
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050 from existing qflow_vars.sh file
+Regenerating files for existing project accumulator_4bit
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to etri050 from existing qflow_vars.sh file
+Regenerating files for existing project accumulator_4bit
+Warning:  No migration logfile found.
+Running netgen
+netgen -batch lvs "accumulator_4bit.spice accumulator_4bit" "/home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.spc accumulator_4bit" /usr/local/share/qflow/tech/etri050/etri050_setup.tcl comp.out -json -blackbox
+Netgen 1.5.307 compiled on Wed Nov 12 14:42:13 KST 2025
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Treating empty subcircuits as black-box cells
+Reading netlist file accumulator_4bit.spice
+

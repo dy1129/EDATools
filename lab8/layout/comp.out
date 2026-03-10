@@ -1,0 +1,142 @@
+
+
+Subcircuit pins:
+Circuit 1: OAI21X1                         |Circuit 2: OAI21X1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OAI21X1 and OAI21X1 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: NAND2X1                         |Circuit 2: NAND2X1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NAND2X1 and NAND2X1 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: OR2X2                           |Circuit 2: OR2X2                           
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes OR2X2 and OR2X2 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: NOR2X1                          |Circuit 2: NOR2X1                          
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NOR2X1 and NOR2X1 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: INVX1                           |Circuit 2: INVX1                           
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes INVX1 and INVX1 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: AOI21X1                         |Circuit 2: AOI21X1                         
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+B                                          |B                                          
+C                                          |C                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes AOI21X1 and AOI21X1 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: BUFX2                           |Circuit 2: BUFX2                           
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+Y                                          |Y                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes BUFX2 and BUFX2 are equivalent.
+
+
+Subcircuit pins:
+Circuit 1: DFFPOSX1                        |Circuit 2: DFFPOSX1                        
+-------------------------------------------|-------------------------------------------
+D                                          |D                                          
+CLK                                        |CLK                                        
+Q                                          |Q                                          
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes DFFPOSX1 and DFFPOSX1 are equivalent.
+
+Subcircuit summary:
+Circuit 1: accumulator_4bit                |Circuit 2: accumulator_4bit                
+-------------------------------------------|-------------------------------------------
+OAI21X1 (5)                                |OAI21X1 (5)                                
+NAND2X1 (4)                                |NAND2X1 (4)                                
+OR2X2 (1)                                  |OR2X2 (1)                                  
+NOR2X1 (6)                                 |NOR2X1 (6)                                 
+INVX1 (5)                                  |INVX1 (5)                                  
+AOI21X1 (4)                                |AOI21X1 (4)                                
+BUFX2 (4)                                  |BUFX2 (4)                                  
+DFFPOSX1 (4)                               |DFFPOSX1 (4)                               
+Number of devices: 33                      |Number of devices: 33                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: accumulator_4bit                |Circuit 2: accumulator_4bit                
+-------------------------------------------|-------------------------------------------
+out[0]                                     |out[0]                                     
+out[1]                                     |out[1]                                     
+out[2]                                     |out[2]                                     
+out[3]                                     |out[3]                                     
+vdd                                        |vdd                                        
+gnd                                        |gnd                                        
+in[1]                                      |in[1]                                      
+in[3]                                      |in[3]                                      
+in[2]                                      |in[2]                                      
+in[0]                                      |in[0]                                      
+clk                                        |clk                                        
+rst_n                                      |rst_n                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes accumulator_4bit and accumulator_4bit are equivalent.
+
+Final result: Circuits match uniquely.
+.

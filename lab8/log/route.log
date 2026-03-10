@@ -1,0 +1,299 @@
+Qflow route logfile created on Tue Dec 16 14:49:07 KST 2025
+qrouter -noc  -s accumulator_4bit.cfg
+Qrouter detail maze router version 1.4.88.T
+Reading LEF data from file /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef.
+LEF Read, Line 113: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 114: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 118: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 119: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 130: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 131: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF file:  Defines site IO (ignored)
+LEF file:  Defines site core (ignored)
+LEF read: Processed 3266 lines.
+LEF Read: encountered 0 errors and 8 warnings total.
+Reading DEF data from file accumulator_4bit.def.
+Diagnostic: Design name: "accumulator_4bit"
+  Processed 0 vias total.
+  Processed 36 subcell instances total.
+  Processed 12 pins total.
+  Processed 39 nets total (0 fixed).
+  Processed 2 special nets total (4 fixed).
+DEF read: Processed 257 lines.
+Output scale = microns / 100, precision 1
+There are 41 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net rst_n
+Nets remaining: 40
+Finished routing net clk
+Nets remaining: 39
+Finished routing net _25_[0]
+Nets remaining: 38
+Finished routing net _5_
+Nets remaining: 37
+Failed to route net _25_[1]
+Finished routing net _12_
+Nets remaining: 36
+Finished routing net _25_[2]
+Nets remaining: 35
+Finished routing net _25_[3]
+Nets remaining: 34
+Finished routing net in[0]
+Nets remaining: 33
+Finished routing net _4_
+Nets remaining: 32
+Finished routing net in[1]
+Nets remaining: 31
+Finished routing net _7_
+Nets remaining: 30
+Finished routing net _9_
+Nets remaining: 29
+Finished routing net _10_
+Nets remaining: 28
+Finished routing net in[2]
+Nets remaining: 27
+Finished routing net _15_
+Nets remaining: 26
+Finished routing net _16_
+Nets remaining: 25
+Finished routing net _17_
+Nets remaining: 24
+Finished routing net _20_
+Nets remaining: 23
+Finished routing net in[3]
+Nets remaining: 22
+Finished routing net _23_
+Nets remaining: 21
+Finished routing net _6_
+Nets remaining: 20
+Finished routing net _0_
+Nets remaining: 19
+Finished routing net _8_
+Nets remaining: 18
+Finished routing net _11_
+Nets remaining: 17
+Finished routing net _1_
+Nets remaining: 16
+Finished routing net _13_
+Nets remaining: 15
+Finished routing net _14_
+Nets remaining: 14
+Finished routing net _18_
+Nets remaining: 13
+Finished routing net _2_
+Nets remaining: 12
+Finished routing net _19_
+Nets remaining: 11
+Finished routing net _21_
+Nets remaining: 10
+Finished routing net _22_
+Nets remaining: 9
+Finished routing net _24_
+Nets remaining: 8
+Finished routing net _3_
+Nets remaining: 7
+Finished routing net out[0]
+Nets remaining: 6
+Finished routing net out[1]
+Nets remaining: 5
+Finished routing net out[2]
+Nets remaining: 4
+Finished routing net out[3]
+Nets remaining: 3
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 69
+Failed net routes: 1
+----------------------------------------------
+*** Running stage2 routing with options mask 10, effort 10
+Nets remaining: 1
+Best route of _25_[1] collides with net: rst_n 
+Ripping up blocking net rst_n
+Nets remaining: 1
+
+----------------------------------------------
+Progress: Stage 2 total routes completed: 74
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net rst_n
+Nets remaining: 40
+Finished routing net clk
+Nets remaining: 39
+Finished routing net _25_[0]
+Nets remaining: 38
+Finished routing net _5_
+Nets remaining: 37
+Finished routing net _25_[1]
+Nets remaining: 36
+Finished routing net _12_
+Nets remaining: 35
+Finished routing net _25_[2]
+Nets remaining: 34
+Finished routing net _25_[3]
+Nets remaining: 33
+Finished routing net in[0]
+Nets remaining: 32
+Finished routing net _4_
+Nets remaining: 31
+Finished routing net in[1]
+Nets remaining: 30
+Finished routing net _7_
+Nets remaining: 29
+Finished routing net _9_
+Nets remaining: 28
+Finished routing net _10_
+Nets remaining: 27
+Finished routing net in[2]
+Nets remaining: 26
+Finished routing net _15_
+Nets remaining: 25
+Finished routing net _16_
+Nets remaining: 24
+Finished routing net _17_
+Nets remaining: 23
+Finished routing net _20_
+Nets remaining: 22
+Finished routing net in[3]
+Nets remaining: 21
+Finished routing net _23_
+Nets remaining: 20
+Keeping route for net _6_
+Finished routing net _0_
+Nets remaining: 18
+Finished routing net _8_
+Nets remaining: 17
+Finished routing net _11_
+Nets remaining: 16
+Keeping route for net _1_
+Finished routing net _13_
+Nets remaining: 14
+Finished routing net _14_
+Nets remaining: 13
+Finished routing net _18_
+Nets remaining: 12
+Finished routing net _2_
+Nets remaining: 11
+Finished routing net _19_
+Nets remaining: 10
+Finished routing net _21_
+Nets remaining: 9
+Finished routing net _22_
+Nets remaining: 8
+Finished routing net _24_
+Nets remaining: 7
+Keeping route for net _3_
+Finished routing net out[0]
+Nets remaining: 5
+Finished routing net out[1]
+Nets remaining: 4
+Finished routing net out[2]
+Nets remaining: 3
+Keeping route for net out[3]
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 140
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net rst_n
+Nets remaining: 40
+Finished routing net clk
+Nets remaining: 39
+Finished routing net _25_[0]
+Nets remaining: 38
+Finished routing net _5_
+Nets remaining: 37
+Finished routing net _25_[1]
+Nets remaining: 36
+Finished routing net _12_
+Nets remaining: 35
+Finished routing net _25_[2]
+Nets remaining: 34
+Finished routing net _25_[3]
+Nets remaining: 33
+Finished routing net in[0]
+Nets remaining: 32
+Finished routing net _4_
+Nets remaining: 31
+Keeping route for net in[1]
+Finished routing net _7_
+Nets remaining: 29
+Finished routing net _9_
+Nets remaining: 28
+Finished routing net _10_
+Nets remaining: 27
+Finished routing net in[2]
+Nets remaining: 26
+Finished routing net _15_
+Nets remaining: 25
+Finished routing net _16_
+Nets remaining: 24
+Finished routing net _17_
+Nets remaining: 23
+Finished routing net _20_
+Nets remaining: 22
+Finished routing net in[3]
+Nets remaining: 21
+Finished routing net _23_
+Nets remaining: 20
+Keeping route for net _6_
+Finished routing net _0_
+Nets remaining: 18
+Finished routing net _8_
+Nets remaining: 17
+Finished routing net _11_
+Nets remaining: 16
+Keeping route for net _1_
+Finished routing net _13_
+Nets remaining: 14
+Finished routing net _14_
+Nets remaining: 13
+Finished routing net _18_
+Nets remaining: 12
+Finished routing net _2_
+Nets remaining: 11
+Finished routing net _19_
+Nets remaining: 10
+Finished routing net _21_
+Nets remaining: 9
+Finished routing net _22_
+Nets remaining: 8
+Finished routing net _24_
+Nets remaining: 7
+Keeping route for net _3_
+Finished routing net out[0]
+Nets remaining: 5
+Finished routing net out[1]
+Nets remaining: 4
+Finished routing net out[2]
+Nets remaining: 3
+Keeping route for net out[3]
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 204
+No failed routes!
+----------------------------------------------
+*** Writing DEF file accumulator_4bit_route.def
+emit_routes():  DEF file has 39 nets and 4 specialnets.
+but qrouter wants to write 41 nets and specialnets.
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file accumulator_4bit_route.rc
+DEF2Verilog -v /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.rtlnopwr.v -o /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/etri050/etri050_stdcells.lef accumulator_4bit_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o accumulator_4bit.rtl.anno.v accumulator_4bit_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o accumulator_4bit.rtlnopwr.anno.v accumulator_4bit_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o accumulator_4bit.rtlbb.anno.v accumulator_4bit_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/etri050/etri050_stdcells.sp -o accumulator_4bit.anno.spc accumulator_4bit.rtl.anno.v
+Warning:  No SPICE subcircuit for FILL.  Pin order will be arbitrary.
+Router script ended on Tue Dec 16 14:49:09 KST 2025

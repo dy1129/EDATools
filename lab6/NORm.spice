@@ -1,0 +1,13 @@
+* NGSPICE file created from NORm.ext - technology: scmos
+
+.subckt NORm vdd A B vss
+M1000 a_134_146# A vdd vdd pfet w=12u l=0.6u
++  ad=3.6p pd=12.6u as=25.2p ps=28.2u
+M1001 a_134_8# B a_134_146# vdd pfet w=12u l=0.6u
++  ad=25.2p pd=28.2u as=3.6p ps=12.6u
+M1002 vss B a_134_8# vss nfet w=3u l=0.6u
++  ad=6.3p pd=10.2u as=3.6p ps=5.4u
+M1003 a_134_8# A vss vss nfet w=3u l=0.6u
++  ad=3.6p pd=5.4u as=6.3p ps=10.2u
+.ends
+

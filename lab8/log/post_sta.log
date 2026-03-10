@@ -1,0 +1,237 @@
+Qflow static timing analysis logfile created on Tue Dec 16 14:49:10 KST 2025
+Converting qrouter output to vesta delay format
+Running rc2dly -r accumulator_4bit.rc -l /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -V /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.rtl.v
+-d accumulator_4bit.dly
+Converting qrouter output to SPEF delay format
+Running rc2dly -D : -r accumulator_4bit.rc -l /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -V /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.rtl.v
+-d accumulator_4bit.spef
+Converting qrouter output to SDF delay format
+Running rc2dly -r accumulator_4bit.rc -l /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib -V /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.rtl.v
+-d accumulator_4bit.sdf
+Running vesta static timing analysis with back-annotated extracted wire delays
+vesta -c -d accumulator_4bit.dly --long accumulator_4bit.rtlnopwr.v /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.4.100
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "etri05_stdcells"
+End of library at line 6613
+Lib read /usr/local/share/qflow/tech/etri050/etri05_stdcells.lib:  Processed 6615 lines.
+Parsing module "accumulator_4bit"
+Verilog netlist read:  Processed 251 lines.
+Number of paths analyzed:  8
+
+Top 8 maximum delay paths:
+Path _51_/CLK to _54_/D delay 1608.27 ps
+      0.0 ps      clk:        -> _51_/CLK
+    419.4 ps  _25_[0]: _51_/Q -> _26_/A
+    608.0 ps      _4_: _26_/Y -> _36_/A
+    859.9 ps     _12_: _36_/Y -> _45_/A
+   1082.0 ps     _20_: _45_/Y -> _49_/B
+   1248.1 ps     _24_: _49_/Y -> _50_/C
+   1339.7 ps      _3_: _50_/Y -> _54_/D
+
+   clock skew at destination = 0
+   setup at destination = 268.608
+
+Path _53_/CLK to _53_/D delay 1466.04 ps
+      0.1 ps      clk:        -> _53_/CLK
+    413.2 ps  _25_[2]: _53_/Q -> _37_/A
+    529.0 ps     _13_: _37_/Y -> _39_/A
+    761.0 ps     _15_: _39_/Y -> _41_/B
+    951.0 ps     _17_: _41_/Y -> _42_/B
+   1107.8 ps     _18_: _42_/Y -> _43_/C
+   1198.5 ps      _2_: _43_/Y -> _53_/D
+
+   clock skew at destination = 0
+   setup at destination = 267.513
+
+Path _51_/CLK to _52_/D delay 1429.46 ps
+      0.0 ps      clk:        -> _51_/CLK
+    419.4 ps  _25_[0]: _51_/Q -> _26_/A
+    608.0 ps      _4_: _26_/Y -> _27_/A
+    876.6 ps      _5_: _27_/Y -> _34_/A
+   1033.1 ps     _11_: _34_/Y -> _35_/C
+   1159.1 ps      _1_: _35_/Y -> _52_/D
+
+   clock skew at destination = 0
+   setup at destination = 270.324
+
+Path _51_/CLK to _51_/D delay 1260.42 ps
+      0.0 ps      clk:        -> _51_/CLK
+    419.4 ps  _25_[0]: _51_/Q -> _26_/A
+    608.0 ps      _4_: _26_/Y -> _27_/A
+    876.6 ps      _5_: _27_/Y -> _29_/B
+    974.7 ps      _0_: _29_/Y -> _51_/D
+
+   clock skew at destination = 0
+   setup at destination = 285.697
+
+Path _51_/CLK to output pin out[0] delay 592.424 ps
+      0.0 ps      clk:        -> _51_/CLK
+    419.4 ps  _25_[0]: _51_/Q -> _55_/A
+    592.4 ps   out[0]: _55_/Y -> out[0]
+
+Path _54_/CLK to output pin out[3] delay 590.364 ps
+      0.1 ps      clk:        -> _54_/CLK
+    418.0 ps  _25_[3]: _54_/Q -> _58_/A
+    590.4 ps   out[3]: _58_/Y -> out[3]
+
+Path _52_/CLK to output pin out[1] delay 589.737 ps
+      0.1 ps      clk:        -> _52_/CLK
+    416.9 ps  _25_[1]: _52_/Q -> _56_/A
+    589.7 ps   out[1]: _56_/Y -> out[1]
+
+Path _53_/CLK to output pin out[2] delay 586.867 ps
+      0.1 ps      clk:        -> _53_/CLK
+    413.2 ps  _25_[2]: _53_/Q -> _57_/A
+    586.9 ps   out[2]: _57_/Y -> out[2]
+
+Computed maximum clock frequency (zero margin) = 621.787 MHz
+-----------------------------------------
+
+Number of paths analyzed:  8
+
+Top 8 minimum delay paths:
+Path _51_/CLK to _51_/D delay 369.274 ps
+      0.0 ps      clk:        -> _51_/CLK
+    249.8 ps  _25_[0]: _51_/Q -> _28_/A
+    378.9 ps      _6_: _28_/Y -> _29_/A
+    464.4 ps      _0_: _29_/Y -> _51_/D
+
+   clock skew at destination = 0
+   hold at destination = -95.0781
+
+Path _53_/CLK to output pin out[2] delay 374.818 ps
+      0.1 ps      clk:        -> _53_/CLK
+    227.8 ps  _25_[2]: _53_/Q -> _57_/A
+    374.8 ps   out[2]: _57_/Y -> out[2]
+
+Path _52_/CLK to output pin out[1] delay 388.357 ps
+      0.1 ps      clk:        -> _52_/CLK
+    241.1 ps  _25_[1]: _52_/Q -> _56_/A
+    388.4 ps   out[1]: _56_/Y -> out[1]
+
+Path _54_/CLK to output pin out[3] delay 392.409 ps
+      0.1 ps      clk:        -> _54_/CLK
+    245.3 ps  _25_[3]: _54_/Q -> _58_/A
+    392.4 ps   out[3]: _58_/Y -> out[3]
+
+Path _51_/CLK to output pin out[0] delay 398.213 ps
+      0.0 ps      clk:        -> _51_/CLK
+    249.8 ps  _25_[0]: _51_/Q -> _55_/A
+    398.2 ps   out[0]: _55_/Y -> out[0]
+
+Path _54_/CLK to _54_/D delay 501.095 ps
+      0.1 ps      clk:        -> _54_/CLK
+    245.3 ps  _25_[3]: _54_/Q -> _46_/A
+    361.1 ps     _21_: _46_/Y -> _48_/A
+    494.5 ps     _23_: _48_/Y -> _50_/B
+    595.9 ps      _3_: _50_/Y -> _54_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.7563
+
+Path _53_/CLK to _53_/D delay 541.909 ps
+      0.1 ps      clk:        -> _53_/CLK
+    227.8 ps  _25_[2]: _53_/Q -> _40_/A
+    359.8 ps     _16_: _40_/Y -> _41_/A
+    530.7 ps     _17_: _41_/Y -> _43_/B
+    636.1 ps      _2_: _43_/Y -> _53_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.1625
+
+Path _52_/CLK to _52_/D delay 585.248 ps
+      0.1 ps      clk:        -> _52_/CLK
+    241.1 ps  _25_[1]: _52_/Q -> _32_/A
+    399.7 ps      _9_: _32_/Y -> _33_/A
+    574.4 ps     _10_: _33_/Y -> _35_/B
+    679.4 ps      _1_: _35_/Y -> _52_/D
+
+   clock skew at destination = 0
+   hold at destination = -94.1571
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  4
+
+Top 4 maximum delay paths:
+Path input pin in[1] to _54_/D delay 1133.11 ps
+      0.0 ps  in[1]:        -> _32_/B
+    129.4 ps    _9_: _32_/Y -> _36_/B
+    385.2 ps   _12_: _36_/Y -> _45_/A
+    607.0 ps   _20_: _45_/Y -> _49_/B
+    773.0 ps   _24_: _49_/Y -> _50_/C
+    864.5 ps    _3_: _50_/Y -> _54_/D
+
+   setup at destination = 268.589
+
+Path input pin in[1] to _52_/D delay 960.191 ps
+      0.0 ps  in[1]:        -> _32_/B
+    129.3 ps    _9_: _32_/Y -> _33_/A
+    397.0 ps   _10_: _33_/Y -> _34_/B
+    566.4 ps   _11_: _34_/Y -> _35_/C
+    691.0 ps    _1_: _35_/Y -> _52_/D
+
+   setup at destination = 269.177
+
+Path input pin in[2] to _53_/D delay 954.846 ps
+      0.0 ps  in[2]:        -> _38_/A
+     71.1 ps   _14_: _38_/Y -> _39_/B
+    263.5 ps   _15_: _39_/Y -> _41_/B
+    443.9 ps   _17_: _41_/Y -> _42_/B
+    597.6 ps   _18_: _42_/Y -> _43_/C
+    687.8 ps    _2_: _43_/Y -> _53_/D
+
+   setup at destination = 267.008
+
+Path input pin in[0] to _51_/D delay 763.44 ps
+      0.0 ps  in[0]:        -> _26_/B
+    119.2 ps    _4_: _26_/Y -> _27_/A
+    379.8 ps    _5_: _27_/Y -> _29_/B
+    477.9 ps    _0_: _29_/Y -> _51_/D
+
+   setup at destination = 285.581
+
+-----------------------------------------
+
+Number of paths analyzed:  4
+
+Top 4 minimum delay paths:
+Path input pin in[0] to _51_/D delay 80.2644 ps
+      0.0 ps  in[0]:        -> _28_/B
+     92.1 ps    _6_: _28_/Y -> _29_/A
+    175.7 ps    _0_: _29_/Y -> _51_/D
+
+   hold at destination = -95.3959
+
+Path input pin in[3] to _54_/D delay 205.786 ps
+      0.0 ps  in[3]:        -> _46_/B
+     67.9 ps   _21_: _46_/Y -> _48_/A
+    199.8 ps   _23_: _48_/Y -> _50_/B
+    300.6 ps    _3_: _50_/Y -> _54_/D
+
+   hold at destination = -94.8205
+
+Path input pin in[2] to _53_/D delay 285.333 ps
+      0.0 ps  in[2]:        -> _40_/B
+    104.9 ps   _16_: _40_/Y -> _41_/A
+    274.2 ps   _17_: _41_/Y -> _43_/B
+    379.5 ps    _2_: _43_/Y -> _53_/D
+
+   hold at destination = -94.1835
+
+Path input pin in[1] to _52_/D delay 313.72 ps
+      0.0 ps  in[1]:        -> _32_/B
+    129.3 ps    _9_: _32_/Y -> _33_/A
+    303.0 ps   _10_: _33_/Y -> _35_/B
+    407.9 ps    _1_: _35_/Y -> _52_/D
+
+   hold at destination = -94.1802
+
+-----------------------------------------
+

@@ -1,0 +1,78 @@
+* NGSPICE file created from accumulator_4bit.ext - technology: scmos
+
+* Black-box entry subcircuit for OAI21X1 abstract view
+.subckt OAI21X1 A B C Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for OR2X2 abstract view
+.subckt OR2X2 A B Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL vdd gnd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A Y vdd gnd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 D CLK Q vdd gnd
+.ends
+
+.subckt accumulator_4bit gnd vdd clk rst_n in[3] in[2] in[1] in[0] out[3] out[2] out[1]
++ out[0]
+X_49_ _50_/B _50_/A rst_n _50_/C vdd gnd OAI21X1
+X_48_ _48_/A _48_/B _50_/B vdd gnd NAND2X1
+X_47_ _58_/A in[3] _48_/B vdd gnd OR2X2
+X_29_ _29_/A _35_/A _51_/D vdd gnd NOR2X1
+X_46_ _58_/A in[3] _48_/A vdd gnd NAND2X1
+X_44_ _44_/A _45_/B vdd gnd INVX1
+X_28_ _55_/A in[0] rst_n _29_/A vdd gnd OAI21X1
+X_45_ _45_/A _45_/B _45_/C _50_/A vdd gnd AOI21X1
+X_27_ _36_/A _35_/A vdd gnd INVX1
+X_26_ _55_/A in[0] _36_/A vdd gnd NAND2X1
+X_43_ _45_/A _43_/B _43_/C _53_/D vdd gnd AOI21X1
+X_42_ _45_/A _43_/B rst_n _43_/C vdd gnd OAI21X1
+X_41_ _44_/A _45_/C _43_/B vdd gnd NOR2X1
+X_40_ _57_/A in[2] _44_/A vdd gnd NOR2X1
+XFILL12750x3750 vdd gnd FILL
+X_58_ _58_/A out[3] vdd gnd BUFX2
+X_57_ _57_/A out[2] vdd gnd BUFX2
+X_56_ _56_/A out[1] vdd gnd BUFX2
+X_39_ _39_/A _39_/B _45_/C vdd gnd NOR2X1
+X_55_ _55_/A out[0] vdd gnd BUFX2
+X_38_ in[2] _39_/B vdd gnd INVX1
+X_37_ _57_/A _39_/A vdd gnd INVX1
+X_54_ _54_/D clk _58_/A vdd gnd DFFPOSX1
+X_36_ _36_/A _36_/B _36_/C _45_/A vdd gnd OAI21X1
+X_53_ _53_/D clk _57_/A vdd gnd DFFPOSX1
+X_52_ _52_/D clk _56_/A vdd gnd DFFPOSX1
+X_35_ _35_/A _35_/B _35_/C _52_/D vdd gnd AOI21X1
+X_51_ _51_/D clk _55_/A vdd gnd DFFPOSX1
+X_34_ _35_/A _35_/B rst_n _35_/C vdd gnd OAI21X1
+X_33_ _36_/B _33_/B _35_/B vdd gnd NOR2X1
+X_50_ _50_/A _50_/B _50_/C _54_/D vdd gnd AOI21X1
+X_31_ _36_/C _33_/B vdd gnd INVX1
+X_32_ _56_/A in[1] _36_/B vdd gnd NOR2X1
+X_30_ _56_/A in[1] _36_/C vdd gnd NAND2X1
+XFILL12450x3750 vdd gnd FILL
+XFILL12750x7350 vdd gnd FILL
+.ends
+

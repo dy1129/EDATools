@@ -1,0 +1,13 @@
+** sch_path: /home/dayesong/ETRI050_DesignKit/lab6/NANDx.sch
+.subckt NANDx vdd A B C vss
+*.iopin vdd
+*.ipin A
+*.ipin B
+*.opin C
+*.iopin vss
+M2 C B net1 vss nfet w=6u l=0.6u m=1
+M3 C B vdd vdd pfet w=6u l=0.6u m=1
+M1 C A vdd vdd pfet w=6u l=0.6u m=1
+M4 net1 A vss vss nfet w=6u l=0.6u m=1
+.ends
+.end

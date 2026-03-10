@@ -1,0 +1,90 @@
+Qflow gdsii logfile created on Tue Dec 16 14:49:14 KST 2025
+magic -dnull -noconsole  /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/layout/generate_gds_accumulator_4bit.tcl
+
+Magic 8.3 revision 576 - Compiled on Wed Nov 12 14:36:14 KST 2025.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=10240]
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Loading "/home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/layout/generate_gds_accumulator_4bit.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:   0.000 x 0.000   ( 0.000,  0.000), ( 0.000,  0.000)
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: khu_etri050_stdcells
+Reading "OR2X2".
+CIF file read warning: Input off lambda grid by 7/15; snapped to grid.
+Reading "OR2X1".
+Reading "OAI22X1".
+Reading "OAI21X1".
+Reading "NOR3X1".
+Reading "NOR2X1".
+Reading "NAND3X1".
+Reading "NAND2X1".
+Reading "MUX2X1".
+Reading "INVX8".
+Reading "INVX4".
+Reading "INVX2".
+Reading "INVX1".
+Reading "FILL".
+Reading "DFFSR".
+Reading "DFFPOSX1".
+Reading "DFFNEGX1".
+Reading "CLKBUF3".
+Reading "CLKBUF2".
+Reading "CLKBUF1".
+Reading "BUFX4".
+Reading "BUFX2".
+Reading "AOI22X1".
+Reading "AOI21X1".
+Reading "AND2X2".
+Reading "AND2X1".
+Reading "XOR2X1".
+Reading "XNOR2X1".
+Reading "TBUFX2".
+Reading "TBUFX1".
+Reading "LATCH".
+Reading "HAX1".
+Reading "FAX1".
+Cell accumulator_4bit read from current working directory
+Processing timestamp mismatches.
+Timestamp mismatches found in these cells: NOR2X1, INVX1, OR2X2, NAND2X1, OAI21X1, AOI21X1, DFFPOSX1, BUFX2, FILL.
+   Copying output for cell DFFPOSX1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell AOI21X1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell OAI21X1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell NAND2X1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell OR2X2 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell INVX1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell NOR2X1 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell BUFX2 from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Copying output for cell FILL from /usr/local/share/qflow/tech/etri050/etri05_stdcells.gds2
+   Generating output for cell accumulator_4bit
+GDS generating script ended on Tue Dec 16 14:49:14 KST 2025

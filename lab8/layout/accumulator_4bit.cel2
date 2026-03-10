@@ -1,0 +1,16 @@
+padgroup in permute
+twpin_clk  nonfixed
+twpin_rst_n  nonfixed
+twpin_in[0]  nonfixed
+twpin_in[1]  nonfixed
+twpin_in[2]  nonfixed
+twpin_in[3]  nonfixed
+restrict side L
+
+padgroup out permute
+twpin_out[0]  nonfixed
+twpin_out[1]  nonfixed
+twpin_out[2]  nonfixed
+twpin_out[3]  nonfixed
+restrict side R
+

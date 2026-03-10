@@ -1,0 +1,145 @@
+Qflow LVS logfile created on Tue Dec 16 14:49:13 KST 2025
+netgen -batch lvs "accumulator_4bit.spice accumulator_4bit" "/home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.spc accumulator_4bit" /usr/local/share/qflow/tech/etri050/etri050_setup.tcl comp.out -json -blackbox
+Netgen 1.5.307 compiled on Wed Nov 12 14:42:13 KST 2025
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Treating empty subcircuits as black-box cells
+Reading netlist file accumulator_4bit.spice
+Reading netlist file /home/dayesong/ETRI-0.5um-CMOS-MPW-Std-Cell-DK/lab8/synthesis/accumulator_4bit.spc
+Call to undefined subcircuit FILL
+Creating placeholder cell definition.
+
+Reading setup file /usr/local/share/qflow/tech/etri050/etri050_setup.tcl
+
+Error /usr/local/share/qflow/tech/etri050/etri050_setup.tcl:5 (ignoring), No such cell or bad file number!
+Error /usr/local/share/qflow/tech/etri050/etri050_setup.tcl:6 (ignoring), No such cell or bad file number!
+Warning:  There were errors reading the setup file
+Comparison output logged to file comp.out
+Logging to file "comp.out" enabled
+
+Contents of circuit 1:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'OAI21X1'
+Circuit OAI21X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit OAI21X1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'NAND2X1'
+Circuit NAND2X1 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 6 nets.
+
+Circuit NAND2X1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'OR2X2'
+Circuit OR2X2 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'OR2X2'
+Circuit OR2X2 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 7 nets.
+
+Circuit OR2X2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'NOR2X1'
+Circuit NOR2X1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'NOR2X1'
+Circuit NOR2X1 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 6 nets.
+
+Circuit NOR2X1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'INVX1'
+Circuit INVX1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'INVX1'
+Circuit INVX1 contains 2 device instances.
+  Class: pfet                  instances:   1
+  Class: nfet                  instances:   1
+Circuit contains 4 nets.
+
+Circuit INVX1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'AOI21X1'
+Circuit AOI21X1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'AOI21X1'
+Circuit AOI21X1 contains 6 device instances.
+  Class: pfet                  instances:   3
+  Class: nfet                  instances:   3
+Circuit contains 8 nets.
+
+Circuit AOI21X1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'BUFX2'
+Circuit BUFX2 contains 4 device instances.
+  Class: pfet                  instances:   2
+  Class: nfet                  instances:   2
+Circuit contains 5 nets.
+
+Circuit BUFX2 contains no devices.
+
+Contents of circuit 1:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 0 device instances.
+Circuit contains 0 nets.
+Contents of circuit 2:  Circuit: 'DFFPOSX1'
+Circuit DFFPOSX1 contains 22 device instances.
+  Class: pfet                  instances:  11
+  Class: nfet                  instances:  11
+Circuit contains 17 nets.
+
+Circuit DFFPOSX1 contains no devices.
+
+Contents of circuit 1:  Circuit: 'accumulator_4bit'
+Circuit accumulator_4bit contains 33 device instances.
+  Class: OR2X2                 instances:   1
+  Class: NOR2X1                instances:   6
+  Class: DFFPOSX1              instances:   4
+  Class: AOI21X1               instances:   4
+  Class: NAND2X1               instances:   4
+  Class: OAI21X1               instances:   5
+  Class: BUFX2                 instances:   4
+  Class: INVX1                 instances:   5
+Circuit contains 41 nets.
+Contents of circuit 2:  Circuit: 'accumulator_4bit'
+Circuit accumulator_4bit contains 33 device instances.
+  Class: OR2X2                 instances:   1
+  Class: NOR2X1                instances:   6
+  Class: DFFPOSX1              instances:   4
+  Class: AOI21X1               instances:   4
+  Class: NAND2X1               instances:   4
+  Class: OAI21X1               instances:   5
+  Class: BUFX2                 instances:   4
+  Class: INVX1                 instances:   5
+Circuit contains 41 nets.
+
+Circuit 1 contains 33 devices, Circuit 2 contains 33 devices.
+Circuit 1 contains 41 nets,    Circuit 2 contains 41 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "comp.out" disabled
+LVS Done.
+/usr/local/share/qflow/scripts/count_lvs.py
+LVS reports no net, device, pin, or property mismatches.
+
+Total errors = 0
+LVS checking script ended on Tue Dec 16 14:49:13 KST 2025

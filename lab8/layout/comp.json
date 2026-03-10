@@ -1,0 +1,202 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ], [
+        "A",
+        "Y",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "D",
+        "CLK",
+        "Q",
+        "vdd",
+        "gnd"
+      ], [
+        "D",
+        "CLK",
+        "Q",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "accumulator_4bit",
+      "accumulator_4bit"
+   ],
+   "devices": [
+       [
+         ["OAI21X1", 5],
+         ["NAND2X1", 4],
+         ["OR2X2", 1],
+         ["NOR2X1", 6],
+         ["INVX1", 5],
+         ["AOI21X1", 4],
+         ["BUFX2", 4],
+         ["DFFPOSX1", 4 ]
+       ], [
+         ["OAI21X1", 5 ],
+         ["NAND2X1", 4 ],
+         ["OR2X2", 1 ],
+         ["NOR2X1", 6 ],
+         ["INVX1", 5 ],
+         ["AOI21X1", 4 ],
+         ["BUFX2", 4 ],
+         ["DFFPOSX1", 4 ]
+       ]
+   ],
+   "nets": [
+    41,
+    41
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "out[0]",
+        "out[1]",
+        "out[2]",
+        "out[3]",
+        "vdd",
+        "gnd",
+        "in[1]",
+        "in[3]",
+        "in[2]",
+        "in[0]",
+        "clk",
+        "rst_n"
+      ], [
+        "out[0]",
+        "out[1]",
+        "out[2]",
+        "out[3]",
+        "vdd",
+        "gnd",
+        "in[1]",
+        "in[3]",
+        "in[2]",
+        "in[0]",
+        "clk",
+        "rst_n"
+      ]
+   ]
+  }
+]

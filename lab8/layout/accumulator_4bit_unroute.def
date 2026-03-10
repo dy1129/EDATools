@@ -1,0 +1,257 @@
+VERSION 5.6 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN accumulator_4bit ;
+UNITS DISTANCE MICRONS 100 ;
+
+DIEAREA ( -600 0 ) ( 13800 14700 ) ;
+
+TRACKS Y 0 DO 50 STEP 300 LAYER metal1 ;
+TRACKS X -600 DO 49 STEP 300 LAYER metal2 ;
+TRACKS Y 0 DO 50 STEP 300 LAYER metal3 ;
+
+VIAS 0 ;
+END VIAS
+
+COMPONENTS 36 ;
+- _54_ DFFPOSX1 + PLACED ( 150 150 ) S ;
+- _50_ AOI21X1 + PLACED ( 3750 150 ) S ;
+- _38_ INVX1 + PLACED ( 5250 150 ) FS ;
+- _39_ NOR2X1 + PLACED ( 6150 150 ) S ;
+- _40_ NOR2X1 + PLACED ( 7350 150 ) S ;
+- _37_ INVX1 + PLACED ( 8550 150 ) S ;
+- _53_ DFFPOSX1 + PLACED ( 9450 150 ) S ;
+- _46_ NAND2X1 + PLACED ( 150 3750 ) FN ;
+- _47_ OR2X2 + PLACED ( 1350 3750 ) N ;
+- _48_ NAND2X1 + PLACED ( 2850 3750 ) N ;
+- _49_ OAI21X1 + PLACED ( 4050 3750 ) FN ;
+- _45_ AOI21X1 + PLACED ( 5550 3750 ) FN ;
+- _41_ NOR2X1 + PLACED ( 7050 3750 ) N ;
+- _42_ OAI21X1 + PLACED ( 8250 3750 ) FN ;
+- _43_ AOI21X1 + PLACED ( 9750 3750 ) N ;
+- _57_ BUFX2 + PLACED ( 11250 3750 ) N ;
+- _30_ NAND2X1 + PLACED ( 150 7350 ) S ;
+- _32_ NOR2X1 + PLACED ( 1350 7350 ) S ;
+- _36_ OAI21X1 + PLACED ( 2550 7350 ) FS ;
+- _31_ INVX1 + PLACED ( 4050 7350 ) FS ;
+- _33_ NOR2X1 + PLACED ( 4950 7350 ) FS ;
+- _34_ OAI21X1 + PLACED ( 6150 7350 ) S ;
+- _35_ AOI21X1 + PLACED ( 7650 7350 ) FS ;
+- _52_ DFFPOSX1 + PLACED ( 9150 7350 ) FS ;
+- _26_ NAND2X1 + PLACED ( 150 10950 ) FN ;
+- _28_ OAI21X1 + PLACED ( 1350 10950 ) N ;
+- _27_ INVX1 + PLACED ( 2850 10950 ) N ;
+- _29_ NOR2X1 + PLACED ( 3750 10950 ) N ;
+- _51_ DFFPOSX1 + PLACED ( 4950 10950 ) N ;
+- _44_ INVX1 + PLACED ( 8550 10950 ) N ;
+- _55_ BUFX2 + PLACED ( 9450 10950 ) N ;
+- _56_ BUFX2 + PLACED ( 10650 10950 ) N ;
+- _58_ BUFX2 + PLACED ( 11850 10950 ) N ;
+- FILL12450x3750 FILL + PLACED ( 12450 3750 ) N ;
+- FILL12750x3750 FILL + PLACED ( 12750 3750 ) N ;
+- FILL12750x7350 FILL + PLACED ( 12750 7350 ) S ;
+END COMPONENTS
+
+PINS 12 ;
+- gnd + NET gnd
+  + LAYER metal1 ( -450 0 ) ( 450 0 )
+  + PLACED ( 13680 30 ) N ;
+- vdd + NET vdd
+  + LAYER metal1 ( -450 0 ) ( 450 0 )
+  + PLACED ( -480 30 ) N ;
+- clk + NET clk
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 13800 ) N ;
+- rst_n + NET rst_n
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 13200 ) N ;
+- in[3] + NET in[3]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 5400 ) N ;
+- in[2] + NET in[2]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 6000 ) N ;
+- in[1] + NET in[1]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 9000 ) N ;
+- in[0] + NET in[0]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( -300 12600 ) N ;
+- out[3] + NET out[3]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( 13800 12300 ) N ;
+- out[2] + NET out[2]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( 13800 12900 ) N ;
+- out[1] + NET out[1]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( 13800 13500 ) N ;
+- out[0] + NET out[0]
+  + LAYER metal3 ( -60 -60 ) ( 60 60 )
+  + PLACED ( 13800 14100 ) N ;
+END PINS
+
+NETS 39 ;
+- _25_[0]
+  ( _55_ A ) 
+  ( _51_ Q ) 
+  ( _28_ A ) 
+  ( _26_ A ) ;
+- in[0]
+  ( PIN in[0] ) 
+  ( _28_ B ) 
+  ( _26_ B ) ;
+- _4_
+  ( _36_ A ) 
+  ( _27_ A ) 
+  ( _26_ Y ) ;
+- _5_
+  ( _35_ A ) 
+  ( _34_ A ) 
+  ( _29_ B ) 
+  ( _27_ Y ) ;
+- rst_n
+  ( PIN rst_n ) 
+  ( _49_ C ) 
+  ( _42_ C ) 
+  ( _34_ C ) 
+  ( _28_ C ) ;
+- _6_
+  ( _29_ A ) 
+  ( _28_ Y ) ;
+- _0_
+  ( _51_ D ) 
+  ( _29_ Y ) ;
+- _25_[1]
+  ( _56_ A ) 
+  ( _52_ Q ) 
+  ( _32_ A ) 
+  ( _30_ A ) ;
+- in[1]
+  ( PIN in[1] ) 
+  ( _32_ B ) 
+  ( _30_ B ) ;
+- _7_
+  ( _36_ C ) 
+  ( _31_ A ) 
+  ( _30_ Y ) ;
+- _8_
+  ( _33_ B ) 
+  ( _31_ Y ) ;
+- _9_
+  ( _36_ B ) 
+  ( _33_ A ) 
+  ( _32_ Y ) ;
+- _10_
+  ( _35_ B ) 
+  ( _34_ B ) 
+  ( _33_ Y ) ;
+- _11_
+  ( _35_ C ) 
+  ( _34_ Y ) ;
+- _1_
+  ( _52_ D ) 
+  ( _35_ Y ) ;
+- _12_
+  ( _45_ A ) 
+  ( _43_ A ) 
+  ( _42_ A ) 
+  ( _36_ Y ) ;
+- _25_[2]
+  ( _57_ A ) 
+  ( _53_ Q ) 
+  ( _40_ A ) 
+  ( _37_ A ) ;
+- _13_
+  ( _39_ A ) 
+  ( _37_ Y ) ;
+- in[2]
+  ( PIN in[2] ) 
+  ( _40_ B ) 
+  ( _38_ A ) ;
+- _14_
+  ( _39_ B ) 
+  ( _38_ Y ) ;
+- _15_
+  ( _45_ C ) 
+  ( _41_ B ) 
+  ( _39_ Y ) ;
+- _16_
+  ( _44_ A ) 
+  ( _41_ A ) 
+  ( _40_ Y ) ;
+- _17_
+  ( _43_ B ) 
+  ( _42_ B ) 
+  ( _41_ Y ) ;
+- _18_
+  ( _43_ C ) 
+  ( _42_ Y ) ;
+- _2_
+  ( _53_ D ) 
+  ( _43_ Y ) ;
+- _19_
+  ( _45_ B ) 
+  ( _44_ Y ) ;
+- _20_
+  ( _50_ A ) 
+  ( _49_ B ) 
+  ( _45_ Y ) ;
+- _25_[3]
+  ( _58_ A ) 
+  ( _54_ Q ) 
+  ( _47_ A ) 
+  ( _46_ A ) ;
+- in[3]
+  ( PIN in[3] ) 
+  ( _47_ B ) 
+  ( _46_ B ) ;
+- _21_
+  ( _48_ A ) 
+  ( _46_ Y ) ;
+- _22_
+  ( _48_ B ) 
+  ( _47_ Y ) ;
+- _23_
+  ( _50_ B ) 
+  ( _49_ A ) 
+  ( _48_ Y ) ;
+- _24_
+  ( _50_ C ) 
+  ( _49_ Y ) ;
+- _3_
+  ( _54_ D ) 
+  ( _50_ Y ) ;
+- clk
+  ( PIN clk ) 
+  ( _54_ CLK ) 
+  ( _53_ CLK ) 
+  ( _52_ CLK ) 
+  ( _51_ CLK ) ;
+- out[0]
+  ( PIN out[0] ) 
+  ( _55_ Y ) ;
+- out[1]
+  ( PIN out[1] ) 
+  ( _56_ Y ) ;
+- out[2]
+  ( PIN out[2] ) 
+  ( _57_ Y ) ;
+- out[3]
+  ( PIN out[3] ) 
+  ( _58_ Y ) ;
+END NETS
+
+SPECIALNETS 2 ;
+- gnd
++ FIXED metal1 240 ( 12750 10950 ) ( 13680 * )
+  NEW metal1 240 ( 12750 3750 ) ( 13680 * )
+  NEW metal1 900 ( 13680 30 ) ( * 14670 ) ;
+- vdd
++ FIXED metal1 240 ( -480 14550 ) ( 450 * )
+  NEW metal1 240 ( -480 7350 ) ( 450 * )
+  NEW metal1 240 ( -480 150 ) ( 450 * )
+  NEW metal1 900 ( -480 30 ) ( * 14670 ) ;
+END SPECIALNETS
+
+END DESIGN
